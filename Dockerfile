@@ -1,4 +1,5 @@
 FROM buildpack-deps:jessie
+MAINTAINER Maciej Lotkowski <maciej.lotkowski@gmail.com>
 
 RUN apt-get update && apt-get install -y curl procps && rm -rf /var/lib/apt/lists/*
 

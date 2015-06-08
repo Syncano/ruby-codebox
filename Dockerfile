@@ -2,6 +2,8 @@ FROM ruby:2.2
 
 MAINTAINER Maciej Lotkowski <maciej.lotkowski@gmail.com>
 
+ENV LAST_REFRESHED 2015-06-08
+
 RUN gem install rest_client
 RUN gem install syncano --pre
 

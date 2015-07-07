@@ -3,7 +3,7 @@
 You can build the Docker image from Dockerfile using:
 
 ```
-$ docker built -t syncano/ruby-codebox .
+$ docker built -t quay.io/syncano/ruby-codebox .
 ```
 
 or pull it

@@ -1,8 +1,8 @@
 FROM ubuntu:trusty
 MAINTAINER "Syncano DevOps Team" <devops@syncano.com>
 
-ENV LAST_REFRESHED 2015-12-17
-ENV API_ROOT https://v4.hydraengine.com
+ENV LAST_REFRESHED 2015-12-18
+ENV API_ROOT https://api.syncano.io
 # make sure the package repository is up to date
 # install python-software-properties (so you can do add-apt-repository)
 RUN apt-get update \

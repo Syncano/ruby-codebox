@@ -11,7 +11,7 @@ RUN groupadd -r syncano && \
 
 # enable everyone to use /tmp
 RUN chmod 1777 /tmp
-# -- CUT --
+# -- CUT BEGIN --
 
 ENV API_ROOT https://api.syncano.io
 # make sure the package repository is up to date
@@ -32,8 +32,7 @@ RUN apt-get -y update && apt-get install -qqy \
 RUN gem install rest_client && \
     gem install syncano --pre
 
-# create a special user to run code
-# user without root privileges greatly improves security
+# -- CUT END --
 USER syncano
 WORKDIR /tmp
 CMD "irb"

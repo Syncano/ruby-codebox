@@ -30,7 +30,8 @@ RUN apt-get -y update && apt-get install -qqy \
     javascript-common
 
 RUN gem install rest_client && \
-    gem install syncano --pre
+    gem install syncano --pre && \
+    gem install mailgun-ruby
 
 # -- CUT END --
 USER syncano

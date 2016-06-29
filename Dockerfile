@@ -31,7 +31,8 @@ RUN apt-get -y update && apt-get install -qqy \
 
 RUN gem install rest_client && \
     gem install syncano --pre && \
-    gem install mailgun-ruby
+    gem install mailgun-ruby && \
+    gem install pdf-reader
 
 # -- CUT END --
 USER syncano

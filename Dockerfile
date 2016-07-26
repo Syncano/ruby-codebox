@@ -32,7 +32,8 @@ RUN apt-get -y update && apt-get install -qqy \
 RUN gem install rest_client && \
     gem install syncano --pre && \
     gem install mailgun-ruby && \
-    gem install pdf-reader
+    gem install pdf-reader && \
+    gem install net-sftp
 
 # -- CUT END --
 USER syncano

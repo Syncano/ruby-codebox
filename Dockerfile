@@ -29,7 +29,8 @@ RUN apt-get -y update && apt-get install -qqy \
     bundler \
     javascript-common
 
-RUN bundle install
+COPY Gemfile /tmp/
+RUN bundle install --gemfile=/tmp/Gemfile
 
 # -- CUT END --
 USER syncano

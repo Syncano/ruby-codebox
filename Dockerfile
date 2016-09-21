@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER "Syncano DevOps Team" <devops@syncano.com>
 
-ENV LAST_REFRESHED 2016-03-25
+ENV LAST_REFRESHED 2016-09-21
 ENV SYNCANO_APIROOT https://api.syncano.io/
 
 RUN groupadd -r syncano && \
@@ -29,11 +29,8 @@ RUN apt-get -y update && apt-get install -qqy \
     bundler \
     javascript-common
 
-RUN gem install rest_client && \
-    gem install syncano --pre && \
-    gem install mailgun-ruby && \
-    gem install pdf-reader && \
-    gem install net-sftp
+COPY Gemfile /tmp/
+RUN bundle install --gemfile=/tmp/Gemfile
 
 # -- CUT END --
 USER syncano

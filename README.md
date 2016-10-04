@@ -6,7 +6,7 @@ This repository contains Dockerfile for Ruby 2.2 image with built-in support for
 You can build the image yourself:
 
 ```
-$ docker build -t quay.io/syncano/ruby-codebox .
+$ ./create_ruby_image.sh
 ```
 
 or pull it from Docker registry:

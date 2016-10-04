@@ -1,0 +1,24 @@
+---
+- name: Install dep packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - python-software-properties
+    - software-properties-common
+
+- name: Add Ruby apt repo
+  apt_repository:
+    repo: ppa:brightbox/ruby-ng
+
+- include: common.yml
+
+- name: Copy Gemfile
+  copy:
+    src: Gemfile
+    dest: /tmp/
+
+- name: Install Ruby packages
+  shell:
+    bundle install --gemfile=/tmp/Gemfile

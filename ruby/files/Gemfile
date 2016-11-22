@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rest_client', '~>1.8.3'
+gem 'rest_client', '~>1.8.0'
 gem 'syncano', '~>4.0.0.pre'
 gem 'mailgun-ruby', '~>1.1.0'
 gem 'pdf-reader', '~>1.4.0'

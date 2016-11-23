@@ -11,7 +11,7 @@ dependencies:
     - docker history quay.io/syncano/ruby-codebox
 test:
   override:
-    -  docker run -it -v `pwd`/test.rb:/tmp/test.rb quay.io/syncano/ruby-codebox irb /tmp/test.rb
+    -  docker run -it -v `pwd`/test.rb:/tmp/test.rb quay.io/syncano/ruby-codebox ruby /tmp/test.rb
 
 deployment:
   production:
